@@ -37,9 +37,10 @@ cd backend
 
 # Execute o projeto
 ./mvnw spring-boot:run
+
+
 2️⃣ Rodando o Front-end (Interface)
 Bash
-
 # Entre na pasta do frontend
 cd frontend
 
