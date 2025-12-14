@@ -37,3 +37,30 @@ cd backend
 
 # Execute o projeto
 ./mvnw spring-boot:run
+2️⃣ Rodando o Front-end (Interface)
+Bash
+
+# Entre na pasta do frontend
+cd frontend
+
+# Instale as dependências (caso seja a primeira vez)
+npm install
+
+# Rode o projeto
+npm run dev
+
+A aplicação estará acessível em http://localhost:5173.
+
+📸 Funcionalidades
+[x] Cadastro de novas transações (Entradas/Saídas).
+
+[x] Listagem de transações.
+
+[x] Conexão com Banco de Dados MySQL.
+
+[ ] Exclusão de transações (Em breve).
+
+[ ] Edição de transações (Em breve).
+
+👨‍💻 Autor
+Desenvolvido por Tiago Padavini.
