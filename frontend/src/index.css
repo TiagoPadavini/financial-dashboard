@@ -1,0 +1,178 @@
+/* Reset básico e Fonte */
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f0f2f5;
+  color: #2c3e50;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: block;
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Container Principal com Animação */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  animation: fadeInUp 0.8s ease-out; /* Animação de entrada da página */
+}
+
+/* --- PLACAR DE SALDOS --- */
+.summary-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.box:hover { transform: translateY(-5px); } /* Efeito sutil ao passar o mouse */
+
+.box h3 { margin: 0 0 10px 0; font-size: 0.9rem; color: #7f8c8d; font-weight: 600; }
+.box p { margin: 0; font-size: 1.6rem; font-weight: 700; }
+.total-box { background: linear-gradient(135deg, #2c3e50, #34495e); color: white; }
+.total-box h3 { color: #bdc3c7; }
+
+.income-text { color: #2ecc71; }
+.expense-text { color: #e74c3c; }
+
+/* --- FORMULÁRIO "TECH" --- */
+.form-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.form-box h3 { margin-top: 0; margin-bottom: 1.5rem; color: #34495e; }
+
+form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap; /* Responsivo para telas menores */
+}
+
+/* Inputs Modernos */
+input, select {
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  background-color: #f9fbfc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  flex: 1 1 200px; /* Flexível */
+}
+
+input:focus, select:focus {
+  border-color: #3498db;
+  background-color: white;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1); /* Glow tecnológico */
+}
+
+/* Botão Tecnológico */
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); /* Gradiente */
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.35); /* Sombra luminosa */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  flex: 0 1 150px;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  transform: translateY(-3px); /* Levanta um pouco */
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.5); /* Sombra aumenta */
+}
+
+button:active {
+  transform: translateY(1px); /* Efeito de clique */
+  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* --- LISTA DE TRANSAÇÕES --- */
+h2 { color: #34495e; margin-bottom: 1.5rem; }
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: white;
+  padding: 1.2rem 1.8rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  border-left: 6px solid #ddd;
+  transition: transform 0.2s ease;
+  animation: slideIn 0.5s ease-out; /* Animação de entrada cards */
+}
+
+.card:hover { transform: translateX(5px); }
+
+.card-info h3 { margin: 0 0 5px 0; font-size: 1.1rem; font-weight: 600; }
+.date { font-size: 0.85rem; color: #95a5a6; }
+.income-border { border-left-color: #2ecc71; }
+.expense-border { border-left-color: #e74c3c; }
+.card span.income-text, .card span.expense-text { font-size: 1.1rem; font-weight: 700; }
+/* Ajuste para alinhar o valor e a lixeira */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Botão de Excluir */
+.delete-btn {
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid #ffcccc;
+  color: #e74c3c;
+  padding: 8px 12px;
+  flex: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.delete-btn:hover {
+  background-color: #e74c3c;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}

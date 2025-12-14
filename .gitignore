@@ -1,0 +1,21 @@
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar Java (Backend)
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/help.md
+*.class
+*.log
+
+# Ignorar Node (Frontend)
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+.env
+
+# Ignorar configurações de IDE
+.vscode/
+.idea/
+*.iml
